@@ -3,14 +3,18 @@ const express = require('express');
 
 
 const connectDB = require("./db/connect");
-
+const auth = require("./middlewares/auth");
 const app = express();
 
 // middlewares
 app.use(express.json());
+app.use(require("cors")());
 
 
 // routes
+app.get('/protected', auth, (req, res) => {
+    return res.status(200).json({user:req.user})
+})
 app.use("/api", require("./routes/auth"));
 
 // connect return promise 
