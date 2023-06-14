@@ -21,7 +21,7 @@ export const AuthContextProvider = ({ children }) => {
   // check if the user is logged in.
   const checkUserLoggedIn = async () => {
     try {
-      const res = await fetch(`http://localhost:5000/api/me`, {
+      const res = await fetch(`http://localhost:5000/api/userme`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,

@@ -14,7 +14,7 @@ const Home = () => {
         <h1>Welcome {user ? user.name : null}</h1>
         <hr className="my-4" />
         <a className="btn btn-info" href="#" role="button">
-          Add Contacts
+          Add Course
         </a>
       </div>
     </>

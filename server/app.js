@@ -16,6 +16,7 @@ app.get('/protected', auth, (req, res) => {
     return res.status(200).json({user:req.user})
 })
 app.use("/api", require("./routes/auth"));
+app.use("/api", require("./routes/course"));
 
 // connect return promise 
 const PORT = process.env.PORT || 5000;

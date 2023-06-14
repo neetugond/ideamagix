@@ -32,8 +32,8 @@ const Navbar = ({ title = "lecture scheduler" }) => {
             {user ? (
               <>
                 <li className="nav-item">
-                  <Link to="/mycontacts">
-                    <a className="nav-link">All Contacts</a>
+                  <Link to="/mycourses">
+                    <a className="nav-link">All Courses</a>
                   </Link>
                 </li>
                 <li className="nav-item">
